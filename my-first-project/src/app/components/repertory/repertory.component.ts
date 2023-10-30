@@ -7,6 +7,7 @@ import Contact from 'src/app/models/Contact.model';
   styleUrls: ['./repertory.component.css'],
 })
 export class RepertoryComponent {
+  maValeur=""
   contacts: Contact[] = [];
   firstName = ""
   lastName = ""
@@ -30,5 +31,11 @@ export class RepertoryComponent {
 
   deleteContact(index: number) {
     this.contacts.splice(index, 1);
+  }
+
+  getStyle(){
+    return {
+      'color': this.maValeur === 'i+1%2 ==0' ? 'green' : 'black'
+    }
   }
 }
