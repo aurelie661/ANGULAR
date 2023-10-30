@@ -27,15 +27,29 @@ export class RepertoryComponent {
     );
     this.contacts.push(newContact);
     this.display = true;
+    newContact:{
+      this.firstName ="",
+      this.lastName ="",
+      this.age =0,
+      this.email ="",
+      this.phone =""
+    }
   }
 
   deleteContact(index: number) {
     this.contacts.splice(index, 1);
   }
 
-  getStyle(){
+  getStyle(index: number){
     return {
-      'color': this.maValeur === 'i+1%2 ==0' ? 'green' : 'black'
+      'color': index % 2 === 0 ? 'green' : 'black'
+    }
+  }
+  getClass(index: number){
+    if((index + 1) % 3 === 0){
+      return 'upper';
+    }else{
+      return '';
     }
   }
 }

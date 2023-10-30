@@ -1,31 +1,91 @@
-:host{
-    text-align: center;
-    
+.container {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-top: 0;
+    letter-spacing: 0.2px;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  form div {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #add{
+    background-color: #12913a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    max-height:4rem ;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+  }
+  #delete {
+    background-color: #e10007;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 10px;
+  }
+  
+.upper{
+    text-transform: uppercase;
 }
 
-h2{
-    font-size: 5rem;
-}
-label{
-    font-size: 2rem;
-}
-input{
-    height: 2rem;
-}
-button{
-    margin-top: 5rem;
-    padding: 1rem;
-    border-radius: 10%;
-    cursor: pointer;
-}
-table{
-    border: 2px solid black;
-}
-#add{
-    background-color: green;
-    color: black;
-}
-#delete{
-    background-color: red;
-    color: black;
-}
+@media (max-width: 768px) {
+    form div {
+      flex: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 20px;
+    }
+    table {
+      font-size: 14px;
+    }
+    table th, table td {
+      padding: 8px;
+    }
+  }
