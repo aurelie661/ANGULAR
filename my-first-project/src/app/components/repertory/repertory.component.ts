@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Contact from 'src/app/models/Contact.model';
 
 @Component({
   selector: 'app-repertory',
@@ -6,26 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./repertory.component.css'],
 })
 export class RepertoryComponent {
-  contacts: any[] = [];
-  newContact = {
-    firstName: '',
-    lastName: '',
-    age: 0,
-    email: '',
-    phone: '',
-  };
-  
+  contacts: Contact[] = [];
+  firstName = ""
+  lastName = ""
+  age = 0
+  email = ""
+  phone = ""
+
   display = false;
 
   addContact() {
-    this.contacts.push({ ...this.newContact });
-    this.newContact = {
-      firstName: '',
-      lastName: '',
-      age: 0,
-      email: '',
-      phone: '',
-    };
+    const newContact = new Contact(
+      this.firstName,
+      this.lastName,
+      this.age,
+      this.email,
+      this.phone
+    );
+    this.contacts.push(newContact);
     this.display = true;
   }
 

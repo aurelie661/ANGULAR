@@ -1,5 +1,5 @@
 class Contact{
-    public static count:0
+    public static count=0
     id: number
     constructor(
         public firstName: string,
