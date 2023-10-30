@@ -1,0 +1,27 @@
+<form (submit)="onSubmit($event)">
+  <div>
+    <label for="firstname">Prénom:</label>
+    <input
+      type="text"
+      id="firstname"
+      name="firstname"
+      [(ngModel)]="user.firstname"
+      required
+    />
+  </div>
+  <div>
+    <label for="lastname">Nom:</label>
+    <input
+      type="text"
+      id="lastname"
+      name="lastname"
+      [(ngModel)]="user.lastname"
+      required
+    />
+  </div>
+  <div>
+    <label for="age">Âge:</label>
+    <input type="number" id="age" name="age" [(ngModel)]="user.age" required />
+  </div>
+  <button type="submit">Envoyer</button>
+</form>
