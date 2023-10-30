@@ -1,0 +1,19 @@
+<p>Age : {{ age }}</p>
+<button type="submit" (click)="incrementAge()">Increment</button>
+<!-- affichage par condition avec ngIf-->
+<div *ngIf="age >=18; else blabla">
+    La condition est vérifiée !
+</div>
+<!-- affiche else  à l'aide d'une référence -->
+<ng-template #blabla>
+    <div>
+        La condition est erronée !
+    </div>
+</ng-template>
+<!-- rendu itératif, il est possible d'utiliser la directive ngFor-->
+<ul>
+    <li *ngFor="let firstname of firstnames">{{firstname}}</li>
+</ul>
+<!--  -->
+<p>Firstname => {{ firstname }}</p>
+<input type="text" name="firstname" id="firstname" [(ngModel)]="firstname">
