@@ -1,0 +1,81 @@
+<div>
+  <h2>Ajouter un contact</h2>
+  <form (submit)="addContact()">
+    <div>
+      <label for="firstName">Prénom:</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        [(ngModel)]="newContact.firstName"
+        required
+      />
+    </div>
+    <div>
+      <label for="lastName">Nom:</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        [(ngModel)]="newContact.lastName"
+        required
+      />
+    </div>
+    <div>
+      <label for="age">Âge:</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        [(ngModel)]="newContact.age"
+        required
+      />
+    </div>
+    <div>
+      <label for="email">E-mail:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="newContact.email"
+        required
+      />
+    </div>
+    <div>
+      <label for="phone">Numéro de téléphone:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        [(ngModel)]="newContact.phone"
+        required
+      />
+    </div>
+    <button type="submit" id="add">Ajouter le contact</button>
+  </form>
+</div>
+  <div *ngIf="display">
+    <h2>Liste des contacts</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Prénom</th>
+          <th>Nom</th>
+          <th>Âge</th>
+          <th>E-mail</th>
+          <th>Numéro de téléphone</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts; let i = index">
+          <td>{{ contact.firstName }}</td>
+          <td>{{ contact.lastName }}</td>
+          <td>{{ contact.age }}</td>
+          <td>{{ contact.email }}</td>
+          <td>{{ contact.phone }}</td>
+          <td><button (click)="deleteContact(i)" id="delete">Supprimer</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

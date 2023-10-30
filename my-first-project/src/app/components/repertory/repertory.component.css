@@ -1,0 +1,31 @@
+:host{
+    text-align: center;
+    
+}
+
+h2{
+    font-size: 5rem;
+}
+label{
+    font-size: 2rem;
+}
+input{
+    height: 2rem;
+}
+button{
+    margin-top: 5rem;
+    padding: 1rem;
+    border-radius: 10%;
+    cursor: pointer;
+}
+table{
+    border: 2px solid black;
+}
+#add{
+    background-color: green;
+    color: black;
+}
+#delete{
+    background-color: red;
+    color: black;
+}
