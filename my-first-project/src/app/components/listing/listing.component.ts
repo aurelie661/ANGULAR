@@ -8,11 +8,8 @@ import Contact from 'src/app/models/Contact.model';
 })
 export class ListingComponent {
 
-  contacts: {  firstName: string, lastName: string, age: number, email: string,phone: string }[] = [];
-
-  onPersonAdded(newPerson: { firstName: string, lastName: string, age: number, email: string,phone: string }) {
-    this.contacts.push(newPerson);
-  }
+  @Input()
+  contacts: Contact[] = []
   
   deleteContact(index: number) {
     this.contacts.splice(index, 1);
@@ -20,5 +17,4 @@ export class ListingComponent {
 
   
 }
-console.log();
 

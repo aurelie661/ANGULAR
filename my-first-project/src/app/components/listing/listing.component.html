@@ -1,30 +1,33 @@
-<div class="container">
-    <h2>Liste des contacts</h2>
-    <table>
+<p *ngIf="contacts.length === 0; else elseblock">
+  Il n'y a pas de contacts !
+</p>
+<ng-template #elseblock>
+  <table class="container">
       <thead>
-        <tr>
-          <th>Prénom</th>
-          <th>Nom</th>
-          <th>Âge</th>
-          <th>E-mail</th>
-          <th>Numéro de téléphone</th>
-          <th>Action</th>
-        </tr>
+          <tr>
+              <th>#</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+              <th>Email</th>
+              <th>Phone number</th>
+              <th>Actions</th>
+          </tr>
       </thead>
       <tbody>
-        <tr
-          *ngFor="let contact of contacts; let i = index">
-          <td>{{ contact.firstName }}</td>
-          <td>{{ contact.lastName }}</td>
-          <td>{{ contact.age }}</td>
-          <td>{{ contact.email }}</td>
-          <td>{{ contact.phone }}</td>
-          <td>
-            <button (click)="deleteContact(i)" id="delete">
-              <i class="fa fa-trash"></i> Supprimer
-            </button>
-          </td>
-        </tr>
+          <tr *ngFor="let c of contacts; let i = index;">
+              <td>{{ i + 1 }}</td>
+              <td>{{ c.firstName }}</td>
+              <td>{{ c.lastName }}</td>
+              <td>{{ c.age }}</td>
+              <td>{{ c.email }}</td>
+              <td>{{ c.phone }}</td>
+              <td>
+                <button (click)="deleteContact(i)" id="delete">
+                  <i class="fa fa-trash"></i> Supprimer
+                </button>
+              </td>
+          </tr>
       </tbody>
-    </table>
-  </div>
+  </table>
+</ng-template>

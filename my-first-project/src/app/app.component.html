@@ -1,5 +1,5 @@
 <!-- <app-form-user></app-form-user> -->
 <!-- <app-conditional></app-conditional> -->
 <!-- <app-repertory></app-repertory> -->
-<app-form-contact (contacts)="onPersonAdded($event)"></app-form-contact>
-<app-listing></app-listing>
+<app-form-contact (contacts)="addContactHandler($event)"></app-form-contact>
+<app-listing [contacts]="contacts"></app-listing>

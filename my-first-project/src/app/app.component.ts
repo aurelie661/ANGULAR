@@ -8,9 +8,9 @@ import Contact from './models/Contact.model';
 })
 export class AppComponent {
   title = 'my-first-project';
-  contacts: { firstName: string, lastName: string, age: number, email: string,phone: string }[] = [];
+  contacts: Contact[] = []
 
-  onPersonAdded(newPerson: { firstName: string, lastName: string, age: number, email: string,phone: string }) {
-    this.contacts.push(newPerson);
+  addContactHandler(contact: Contact) {
+    this.contacts = [...this.contacts, contact]
   }
 }
