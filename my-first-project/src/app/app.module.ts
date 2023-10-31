@@ -9,6 +9,9 @@ import { ConditionalComponent } from './components/conditional/conditional.compo
 import { RepertoryComponent } from './components/repertory/repertory.component';
 import { ListingComponent } from './components/listing/listing.component';
 import { FormContactComponent } from './components/form-contact/form-contact.component';
+import { FormElementComponent } from './components/form-element/form-element.component';
+import { ListElementComponent } from './components/list-element/list-element.component';
+import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { FormContactComponent } from './components/form-contact/form-contact.com
     ConditionalComponent,
     RepertoryComponent,
     ListingComponent,
-    FormContactComponent
+    FormContactComponent,
+    FormElementComponent,
+    ListElementComponent,
+    DeleteButtonComponent
   ],
   imports: [
     BrowserModule,

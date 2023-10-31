@@ -1,0 +1,17 @@
+<p *ngIf="contacts.length === 0; else elseblock">
+    Il n'y a pas de contacts !
+  </p>
+<ng-template #elseblock>
+    <div class="card container" style="width: 21rem;" *ngFor="let c of contacts; let i = index;">
+      <img src="../../../assets/user.png" class="card-img-top" alt="userPic">
+      <hr>
+      <div class="card-body">
+        <h2 class="text-center">{{ c.firstName }}</h2>
+        <h3 class="text-center">{{ c.lastName }}</h3>
+        <h4 class="text-center">{{ c.age }}</h4>
+        <p class="text-center">{{ c.email }}</p>
+        <p class="text-center">{{ c.phone }}</p>
+        <app-delete-button (click)="onDelete(i)"></app-delete-button>
+      </div>
+    </div>
+  </ng-template>

@@ -1,0 +1,47 @@
+<div class="container">
+    <h2>Ajouter un contact</h2>
+    <hr />
+    <form (submit)="addContact($event)">
+      <div>
+        <label for="firstName">Prénom:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          [(ngModel)]="contacts.firstName"
+          required
+        />
+      </div>
+      <div>
+        <label for="lastName">Nom:</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          [(ngModel)]="contacts.lastName"
+          required
+        />
+      </div>
+      <div>
+        <label for="age">Âge:</label>
+        <input type="number" id="age" name="age" [(ngModel)]="contacts.age" required />
+      </div>
+      <div>
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="contacts.email"
+          required
+        />
+      </div>
+      <div>
+        <label for="phone">Téléphone:</label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="contacts.phone" required />
+      </div>
+      <button type="submit" id="add">
+        <i class="fa fa-arrow-right"></i> Ajouter le contact
+      </button>
+    </form>
+  </div>
