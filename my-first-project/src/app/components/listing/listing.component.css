@@ -1,0 +1,38 @@
+#delete {
+    background-color: #e10007;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 10px;
+  }
+  @media (max-width: 768px) {
+    form div {
+      flex: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 20px;
+    }
+    table {
+      font-size: 14px;
+    }
+    table th, table td {
+      padding: 8px;
+    }
+  }

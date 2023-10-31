@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Liste des contacts</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Prénom</th>
+          <th>Nom</th>
+          <th>Âge</th>
+          <th>E-mail</th>
+          <th>Numéro de téléphone</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let contact of contacts; let i = index">
+          <td>{{ contact.firstName }}</td>
+          <td>{{ contact.lastName }}</td>
+          <td>{{ contact.age }}</td>
+          <td>{{ contact.email }}</td>
+          <td>{{ contact.phone }}</td>
+          <td>
+            <button (click)="deleteContact(i)" id="delete">
+              <i class="fa fa-trash"></i> Supprimer
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

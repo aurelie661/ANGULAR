@@ -7,13 +7,17 @@ import { FormUserComponent } from './components/form-user/form-user.component';
 import { FormsModule } from '@angular/forms';
 import { ConditionalComponent } from './components/conditional/conditional.component';
 import { RepertoryComponent } from './components/repertory/repertory.component';
+import { ListingComponent } from './components/listing/listing.component';
+import { FormContactComponent } from './components/form-contact/form-contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormUserComponent,
     ConditionalComponent,
-    RepertoryComponent
+    RepertoryComponent,
+    ListingComponent,
+    FormContactComponent
   ],
   imports: [
     BrowserModule,
