@@ -7,7 +7,7 @@ export class LengthTextPipe implements PipeTransform {
 
   transform(value: string, delimitation: number = 50): string {
     if(value.length > 50){
-      return value.substring(0,delimitation)+ "...";
+      return value.trimEnd().substring(0,delimitation).trimEnd()+ "...";
     }else{
       return value;
     }
