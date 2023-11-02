@@ -12,4 +12,5 @@ export class DemoPipeComponent {
     "ElLIoT",
     "JACKY"
   ]
+  today= new Date()
 }
