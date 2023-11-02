@@ -12,6 +12,8 @@ import { FormContactComponent } from './components/form-contact/form-contact.com
 import { FormElementComponent } from './components/form-element/form-element.component';
 import { ListElementComponent } from './components/list-element/list-element.component';
 import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
+import { DemoPipeComponent } from './components/demo-pipe/demo-pipe.component';
+import { EnMajPipe } from './pipes/en-maj.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DeleteButtonComponent } from './components/delete-button/delete-button.
     FormContactComponent,
     FormElementComponent,
     ListElementComponent,
-    DeleteButtonComponent
+    DeleteButtonComponent,
+    DemoPipeComponent,
+    EnMajPipe
   ],
   imports: [
     BrowserModule,
