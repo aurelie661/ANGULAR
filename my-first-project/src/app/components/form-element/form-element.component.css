@@ -1,5 +1,5 @@
 .container {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 100px auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -32,6 +32,13 @@
   
   input {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  select {
+    width: 20%;
+    height: 10%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;

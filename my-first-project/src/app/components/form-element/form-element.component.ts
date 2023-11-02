@@ -7,6 +7,7 @@ import Contact from 'src/app/models/Contact.model';
   styleUrls: ['./form-element.component.css']
 })
 export class FormElementComponent {
+  sortingType: keyof Contact | "" = ""
   contacts: Contact = {
     id: 0,
     firstName: '',
@@ -18,6 +19,7 @@ export class FormElementComponent {
 
   @Output('contacts')
   personAdded = new EventEmitter<Contact>();
+
 
   addContact(event: Event) {
     event.preventDefault();
@@ -31,4 +33,5 @@ export class FormElementComponent {
       phone: '',
     };
   }
+  
 }

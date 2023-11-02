@@ -15,6 +15,7 @@ import { DeleteButtonComponent } from './components/delete-button/delete-button.
 import { DemoPipeComponent } from './components/demo-pipe/demo-pipe.component';
 import { EnMajPipe } from './pipes/en-maj.pipe';
 import { LengthTextPipe } from './pipes/length-text.pipe';
+import { TriePipe } from './pipes/trie.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LengthTextPipe } from './pipes/length-text.pipe';
     DeleteButtonComponent,
     DemoPipeComponent,
     EnMajPipe,
-    LengthTextPipe
+    LengthTextPipe,
+    TriePipe
   ],
   imports: [
     BrowserModule,
