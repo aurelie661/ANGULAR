@@ -14,6 +14,7 @@ import { ListElementComponent } from './components/list-element/list-element.com
 import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 import { DemoPipeComponent } from './components/demo-pipe/demo-pipe.component';
 import { EnMajPipe } from './pipes/en-maj.pipe';
+import { LengthTextPipe } from './pipes/length-text.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EnMajPipe } from './pipes/en-maj.pipe';
     ListElementComponent,
     DeleteButtonComponent,
     DemoPipeComponent,
-    EnMajPipe
+    EnMajPipe,
+    LengthTextPipe
   ],
   imports: [
     BrowserModule,
