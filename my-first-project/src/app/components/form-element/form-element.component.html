@@ -52,19 +52,19 @@
         required
       />
     </div>
-    <label for="pet-select">Choose a pet:</label>
-
-    <select name="sort" id="sort" [(ngModel)]="sortingType">
-      <option value="">--Please choose an option--</option>
-      <option value="id">Id</option>
-      <option value="firstName">FirstName</option>
-      <option value="lastName">LastName</option>
-      <option value="age">Age</option>
-      <option value="email">Email</option>
-      <option value="phone">Phone</option>
-    </select>
+    
     <button type="submit" id="add">
       <i class="fa fa-arrow-right"></i> Ajouter le contact
     </button>
   </form>
+  <label for="pet-select">Choose a pet:</label>
+  <select name="sort" id="sort" [(ngModel)]="sortingType">
+    <option value="">--Please choose an option--</option>
+    <option value="id">Id</option>
+    <option value="firstName">FirstName</option>
+    <option value="lastName">LastName</option>
+    <option value="age">Age</option>
+    <option value="email">Email</option>
+    <option value="phone">Phone</option>
+  </select>
 </div>

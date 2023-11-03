@@ -4,5 +4,5 @@
 <!-- <app-form-contact (contacts)="addContactHandler($event)"></app-form-contact>
 <app-listing [contacts]="contacts"></app-listing> -->
 <app-form-element (contacts)="addContactHandler($event)"></app-form-element>
-<app-list-element [contacts]="contacts"></app-list-element>
+<app-list-element [contacts]="contacts" *ngFor="let contact of contacts | trie: sortingType"></app-list-element>
 <!-- <app-demo-pipe></app-demo-pipe> -->

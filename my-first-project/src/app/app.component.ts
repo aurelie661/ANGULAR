@@ -9,6 +9,7 @@ import Contact from './models/Contact.model';
 export class AppComponent {
   title = 'my-first-project';
   contacts: Contact[] = []
+  sortingType: keyof Contact | "" = ""
 
   addContactHandler(contact: Contact) {
     this.contacts = [...this.contacts, contact]
