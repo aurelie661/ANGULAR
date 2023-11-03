@@ -3,6 +3,55 @@
 <!-- <app-repertory></app-repertory> -->
 <!-- <app-form-contact (contacts)="addContactHandler($event)"></app-form-contact>
 <app-listing [contacts]="contacts"></app-listing> -->
-<app-form-element (contacts)="addContactHandler($event)"></app-form-element>
-<app-list-element [contacts]="contacts" *ngFor="let contact of contacts | trie: sortingType"></app-list-element>
+<!-- <app-form-element (contacts)="addContactHandler($event)"></app-form-element>
+<app-list-element [contacts]="contacts" *ngFor="let contact of contacts | trie: sortingType"></app-list-element> -->
 <!-- <app-demo-pipe></app-demo-pipe> -->
+
+<!-- <h1>Demo projection Contenu</h1>
+<hr />
+<app-button (onClick)="clickAHandler()">
+  <span>Bouton Affichage modal</span>
+</app-button>
+<app-button (onClick)="clickBHandler()">
+  <span>Bouton B</span>
+</app-button>
+<app-card>
+  <p>Ceci est un paragraphe</p>
+</app-card>
+<app-card>
+  <img src="http://random.imagecdn.app/200/200" alt="Random Pic" />
+</app-card>
+<app-card>
+  <button>Button from parent</button>
+</app-card>
+
+<div *ngIf="modalVisible" class="background" (click)="closeModal()">
+  <div class="content">
+    <button (click)="closeModal()">Close</button>
+    <ng-content></ng-content>
+  </div>
+</div> -->
+
+
+<button (click)="changeModalVisilibty('image')">Show Image</button>
+<button (click)="changeModalVisilibty('text')">Show Text</button>
+<button (click)="changeModalVisilibty('form')">Show Form</button>
+<app-card (close)="changeModalVisilibty('')" *ngIf="modalVisibility === 'text'">
+  <p>Du texte</p>
+  <!-- <img src="http://random.imagecdn.app/500/500" alt="Random pic"> -->
+</app-card>
+<app-card (close)="changeModalVisilibty('')" *ngIf="modalVisibility === 'image'">
+  <img src="http://random.imagecdn.app/500/500" alt="Random pic">
+</app-card>
+<app-card (close)="changeModalVisilibty('')" *ngIf="modalVisibility === 'form'">
+  <form action="#">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+  </form>
+</app-card>

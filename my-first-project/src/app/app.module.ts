@@ -16,6 +16,8 @@ import { DemoPipeComponent } from './components/demo-pipe/demo-pipe.component';
 import { EnMajPipe } from './pipes/en-maj.pipe';
 import { LengthTextPipe } from './pipes/length-text.pipe';
 import { TriePipe } from './pipes/trie.pipe';
+import { ButtonComponent } from './components/button/button.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { TriePipe } from './pipes/trie.pipe';
     DemoPipeComponent,
     EnMajPipe,
     LengthTextPipe,
-    TriePipe
+    TriePipe,
+    ButtonComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
