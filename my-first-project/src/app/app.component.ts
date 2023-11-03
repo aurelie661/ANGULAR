@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild,ElementRef } from '@angular/core';
 import Contact from './models/Contact.model';
 
 @Component({
@@ -32,5 +32,22 @@ export class AppComponent {
 
   changeModalVisilibty(value: string) {
     this.modalVisibility = value
+  }
+  firstVisible = false
+  monTexte = "Default"
+  
+  @ViewChild('age') ageElementRef!: ElementRef<HTMLInputElement>
+
+  changeTextValue(input: HTMLInputElement) {
+    const textValue = input.value
+    console.log(textValue);
+    
+    this.monTexte = textValue
+  }
+
+  
+
+  switchFirstVisibility() {
+    this.firstVisible = !this.firstVisible
   }
 }

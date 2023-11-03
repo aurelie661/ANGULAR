@@ -18,6 +18,8 @@ import { LengthTextPipe } from './pipes/length-text.pipe';
 import { TriePipe } from './pipes/trie.pipe';
 import { ButtonComponent } from './components/button/button.component';
 import { CardComponent } from './components/card/card.component';
+import { MinutorComponent } from './components/minutor/minutor.component';
+import { FirstComponent } from './components/first/first.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { CardComponent } from './components/card/card.component';
     LengthTextPipe,
     TriePipe,
     ButtonComponent,
-    CardComponent
+    CardComponent,
+    MinutorComponent,
+    FirstComponent
   ],
   imports: [
     BrowserModule,
