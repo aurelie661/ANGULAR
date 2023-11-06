@@ -20,6 +20,8 @@ import { ButtonComponent } from './components/button/button.component';
 import { CardComponent } from './components/card/card.component';
 import { MinutorComponent } from './components/minutor/minutor.component';
 import { FirstComponent } from './components/first/first.component';
+import { AlphabetComponent } from './components/alphabet/alphabet.component';
+import { AlphabetService } from './services/alphabet.service';
 
 @NgModule({
   declarations: [
@@ -39,14 +41,15 @@ import { FirstComponent } from './components/first/first.component';
     ButtonComponent,
     CardComponent,
     MinutorComponent,
-    FirstComponent
+    FirstComponent,
+    AlphabetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AlphabetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
