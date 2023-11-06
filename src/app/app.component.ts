@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Movie from './models/movie/movie.module';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'modal-project';
+  modalVisibility = ""
+  movies:Movie[] = []
+
+  changeModalVisilibty(value: string) {
+    this.modalVisibility = value
+  }
+
+  addMovieHandler(movie:Movie){
+    this.movies = [...this.movies, movie]
+  }
 }
