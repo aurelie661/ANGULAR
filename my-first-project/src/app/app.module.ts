@@ -22,6 +22,7 @@ import { MinutorComponent } from './components/minutor/minutor.component';
 import { FirstComponent } from './components/first/first.component';
 import { AlphabetComponent } from './components/alphabet/alphabet.component';
 import { AlphabetService } from './services/alphabet.service';
+import { MovieFormComponent } from './components/movie-form/movie-form.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AlphabetService } from './services/alphabet.service';
     CardComponent,
     MinutorComponent,
     FirstComponent,
-    AlphabetComponent
+    AlphabetComponent,
+    MovieFormComponent
   ],
   imports: [
     BrowserModule,
