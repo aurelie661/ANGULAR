@@ -1,4 +1,4 @@
-import { Injectable, Pipe } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable, interval, map } from 'rxjs';
 
 @Injectable({
